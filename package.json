@@ -9,10 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "figlet": "^1.5.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "^8.1.1"
   }
