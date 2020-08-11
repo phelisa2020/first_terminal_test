@@ -1,5 +1,4 @@
 module.exports = function(regNo){
-  console.log(regNo);
 	var plates = regNo.split(",")
     var fromStellies = []
     

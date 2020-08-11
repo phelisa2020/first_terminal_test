@@ -25,7 +25,6 @@ var highSales=0;
   
   for (let i=0 ;i<salesData.length; i++){
     var index = salesData[i];
-    console.log(index)
     if (day[index.day] === undefined){
     day[index.day]=0;
     }
@@ -38,7 +37,6 @@ var highSales=0;
        
   }
   }
-       console.log(highSales)
-       console.log(day2)
+      
 return day2;
 }
