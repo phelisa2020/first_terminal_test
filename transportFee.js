@@ -1,4 +1,4 @@
-module.exports = functions(priceShift){
+module.exports = function(priceShift){
 if (priceShift == "morning"){
   return "R20"
 
