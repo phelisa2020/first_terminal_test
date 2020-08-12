@@ -2,17 +2,47 @@ let assert = require("assert");
 let mostProfitableDepartment = require("../mostProfitableDepartment");
 
 describe('mostProfitableDepartment' , function(){
-  it('should return -1 when the most profitable department is not present' , function(){ 
-   
-    assert.equal([
-      'hardware,outdoor,carpentry, hardware, outdoor,carpentry,hardware, outdoor,carpentry,hardware, outdoor,carpentry,hardware,outdoor,carpentry',
-      ].indexOf(20), -1);
+  it('should return  the most profitable department ' , function(){ 
+   var salesData = [
+    {department: 'hardware', sales: 4500, day: 'Monday'},
+    {department: 'outdoor', sales: 1500, day: 'Monday'},
+    {department: 'carpentry', sales: 5500, day: 'Monday'},
+    {department: 'hardware', sales: 7500, day: 'Tuesday'},
+    {department: 'outdoor', sales: 2505, day: 'Tuesday'},
+    {department: 'carpentry', sales: 1540, day: 'Tuesday'},
+    {department: 'hardware', sales: 1500, day: 'Wednesday'},
+    {department: 'outdoor', sales: 8507, day: 'Wednesday'},
+    {department: 'carpentry', sales: 8009, day: 'Wednesday'},
+    {department: 'hardware', sales: 12000, day: 'Thursday'},
+    {department: 'outdoor', sales: 18007, day: 'Thursday'},
+    {department: 'carpentry', sales: 6109, day: 'Thursday'},
+    {department: 'hardware', sales: 7005, day: 'Friday'},
+    {department: 'outdoor', sales: 12006, day: 'Friday'},
+    {department: 'carpentry', sales: 16109, day: 'Friday'}
+];
+
+    assert.equal(salesData, mostProfitableDepartment(salesData, 10));
   });
-  it('should return hardware for the first most profitable department', function(){
-   
-    assert.equal(mostProfitableDepartment(([
-      'hardware,outdoor,carpentry, hardware, outdoor,carpentry,hardware, outdoor,carpentry,hardware, outdoor,carpentry,hardware,outdoor,carpentry',
-      ]),'hardware'), 0 );
+  it('should return false if it is not the most profitable department', function(){
+   var salesData = [
+    {department: 'hardware', sales: 4500, day: 'Monday'},
+    {department: 'outdoor', sales: 1500, day: 'Monday'},
+    {department: 'carpentry', sales: 5500, day: 'Monday'},
+    {department: 'hardware', sales: 7500, day: 'Tuesday'},
+    {department: 'outdoor', sales: 2505, day: 'Tuesday'},
+    {department: 'carpentry', sales: 1540, day: 'Tuesday'},
+    {department: 'hardware', sales: 1500, day: 'Wednesday'},
+    {department: 'outdoor', sales: 8507, day: 'Wednesday'},
+    {department: 'carpentry', sales: 8009, day: 'Wednesday'},
+    {department: 'hardware', sales: 12000, day: 'Thursday'},
+    {department: 'outdoor', sales: 18007, day: 'Thursday'},
+    {department: 'carpentry', sales: 6109, day: 'Thursday'},
+    {department: 'hardware', sales: 7005, day: 'Friday'},
+    {department: 'outdoor', sales: 12006, day: 'Friday'},
+    {department: 'carpentry', sales: 16109, day: 'Friday'}
+];
+
+   assert.equal(false, mostProfitableDepartment(salesData, 2));
   });
   
 });
