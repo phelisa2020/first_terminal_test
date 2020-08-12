@@ -20,15 +20,13 @@ describe('mostProfitableDepartment' , function(){
     {department: 'carpentry', sales: 16109, day: 'Friday'}
 ];
    
-   var department = ''
+   var department = 'outdoor'
   it('should return  the most profitable department ' , function(){ 
   
     assert.equal(department, mostProfitableDepartment(salesData));
   });
-  it('should return false if it is not the most profitable department', function(){
-   
 
-   assert.equal(false, mostProfitableDepartment(salesData));
-  });
-  
 });
+
+
+
